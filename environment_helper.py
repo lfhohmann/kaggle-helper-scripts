@@ -17,7 +17,7 @@ __user__ = "@lfhohmann"
 
 __status__ = "Production"
 __date__ = "2022/03/06"
-__version__ = "10.0"
+__version__ = "11.0.0"
 __license__ = "MIT"
 
 
@@ -43,16 +43,19 @@ class Environment:
         Parameters
         ----------
 
-        data : dict (required)
-            Dictionary containinf the environment variables inside the keys:
-            ("kaggle", "local").
+        #### data : dict (required)
+        Dictionary containing the environment variables inside the keys:
+        ("kaggle", "local").
 
-            Ex.: ```{"kaggle": {"token": 123}, "local": {"token": "321"}}```
+        >>> {
+        ...     "kaggle": {"token": 123},
+        ...     "local": {"token": 321},
+        ... }
 
         Returns
         -------
 
-        `None`
+        >>> None
         """
 
         # Set the main attributes for "kaggle" mode
@@ -84,13 +87,13 @@ class Environment:
         Parameters
         ----------
 
-        data : dict (required)
-            The dictionary passed to it in the constructor (__init__) function
+        #### data : dict (required)
+        The dictionary passed to it from the constructor (__init__) function
 
         Returns
         -------
 
-        `None`
+        >>> None
         """
 
         # Iterate over the passed data
@@ -110,11 +113,11 @@ class Environment:
         Returns
         -------
 
-        str:
-            A string containing the environment "mode"
+        #### str:
+        A string containing the environment "mode"
 
-            Ex.: `kaggle`
-            Ex.: `local`
+        >>> "kaggle"
+        >>> "local"
         """
 
         return self.__mode
@@ -130,11 +133,11 @@ class Environment:
         Returns
         -------
 
-        str:
-            A string containing the environment "dirpath"
+        #### str:
+        A string containing the environment "dirpath"
 
-            Ex.: `.//data//`
-            Ex.: `/kaggle/working/`
+        >>> ".//data//"
+        >>> "/kaggle/working/"
         """
 
         return self.__dirpath

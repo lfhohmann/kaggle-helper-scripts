@@ -20,7 +20,7 @@ __user__ = "@lfhohmann"
 
 __status__ = "Production"
 __date__ = "2022/03/06"
-__version__ = "1.0"
+__version__ = "1.0.0"
 __license__ = "MIT"
 
 
@@ -31,14 +31,14 @@ class TestEnvironmentHelper(unittest.TestCase):
 
     Tests the Environment Helper variables class
 
-    Note: Only the current environment mode ("kaggle" or "local") will be
-    tested
+    #### Note:
+    Only the current environment mode ("kaggle" or "local") will be tested
     """
 
     # Check current environment mode
     current_mode = "kaggle" if "kaggle" in os.getcwd() else "local"
 
-    def test_mode(self):
+    def test_mode(self) -> None:
         """Test if the current environment mode is "kaggle" or "local"."""
 
         # Instantiate the environment variables class
@@ -47,7 +47,7 @@ class TestEnvironmentHelper(unittest.TestCase):
         # Check if the current environment is "kaggle" or "local"
         self.assertEqual(env.mode, self.current_mode)
 
-    def test_readonly_attributes(self):
+    def test_readonly_attributes(self) -> None:
         """Test if the readonly attributes ("mode", "dirpath") can't be set"""
 
         # Instantiate the environment variables class
@@ -58,7 +58,7 @@ class TestEnvironmentHelper(unittest.TestCase):
             with self.assertRaises(AttributeError):
                 setattr(env, attribute, "value")
 
-    def test_variables(self):
+    def test_variables(self) -> None:
         """Test if the custom variables are set correctly"""
 
         data = {
