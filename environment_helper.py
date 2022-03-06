@@ -6,7 +6,7 @@ Enviroment Variables helper
 --------------------------
 
 This module defines variables based on the Current Working Directory (CWD), to
-find out if we are in a `kaggle` or a `local` environment.
+find out if we are in a "kaggle" or a "local" environment.
 """
 
 import os
@@ -52,7 +52,7 @@ class Environment:
         Returns
         -------
 
-        None
+        `None`
         """
 
         # Set the main attributes for "kaggle" mode
@@ -90,7 +90,7 @@ class Environment:
         Returns
         -------
 
-        None
+        `None`
         """
 
         # Iterate over the passed data
