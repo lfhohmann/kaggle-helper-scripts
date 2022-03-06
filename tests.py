@@ -77,7 +77,9 @@ class TestEnvironmentHelper(unittest.TestCase):
 
         # Check if the custom variables are set correctly
         for attribute in data[env.mode].keys():
-            self.assertEqual(data[env.mode][attribute], getattr(env, attribute))
+            value = data[self.current_mode][attribute]
+
+            self.assertEqual(value, getattr(env, attribute))
 
 
 if __name__ == "__main__":
