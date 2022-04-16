@@ -19,8 +19,8 @@ __email__ = "lfhohmann@gmail.com"
 __user__ = "@lfhohmann"
 
 __status__ = "Production"
-__date__ = "2022/03/06"
-__version__ = "1.0.0"
+__date__ = "2022/04/16"
+__version__ = "2.0.0"
 __license__ = "MIT"
 
 
@@ -48,13 +48,13 @@ class TestEnvironmentHelper(unittest.TestCase):
         self.assertEqual(env.mode, self.current_mode)
 
     def test_readonly_attributes(self) -> None:
-        """Test if the readonly attributes ("mode", "dirpath") can't be set"""
+        """Test if the readonly attributes ("mode", "path_input", "path_output") can't be set"""
 
         # Instantiate the environment variables class
         env = Environment()
 
         # Check if the readonly attributes can't be set
-        for attribute in ["mode", "dirpath"]:
+        for attribute in ["mode", "path_input", "path_output"]:
             with self.assertRaises(AttributeError):
                 setattr(env, attribute, "value")
 
