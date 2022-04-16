@@ -78,6 +78,13 @@ class Environment:
             if data and "local" in data:
                 self.__set_data_attr(data["local"])
 
+        # Create directories if they don't exist
+        if not os.path.exists(self.path_input):
+            os.makedirs(self.path_input)
+
+        if not os.path.exists(self.path_output):
+            os.makedirs(self.path_output)
+
     def __set_data_attr(self, data: dict) -> None:
         """
         Set attributes
