@@ -17,7 +17,7 @@ __user__ = "@lfhohmann"
 
 __status__ = "Production"
 __date__ = "2022/04/16"
-__version__ = "12.0.0"
+__version__ = "13.0.0"
 __license__ = "MIT"
 
 
